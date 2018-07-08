@@ -129,15 +129,18 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
    1, others to 0 */
 
 int cardEffectAdventurer(struct gameState *state, int drawntreasure, int currentPlayer, int *temphand, int cardDrawn, int z);
-/* Refactored cardEffect() Adventurer case*/
+/* Refactored cardEffect() Adventurer case */
 
 int cardEffectSmithy(struct gameState *state, int currentPlayer, int handPos, int i);
-/* Refactored cardEffect() Smithy case*/
+/* Refactored cardEffect() Smithy case */
 
 int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int i, int j);
-/* Refactored cardEffect() Minion case*/
+/* Refactored cardEffect() Minion case */
 
 int cardEffectCutpurse(struct gameState *state, int currentPlayer, int handPos, int i, int j, int k);
-/* Refactored cardEffect() Cutpurse case*/
+/* Refactored cardEffect() Cutpurse case */
+
+int cardEffectAmbassador(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2, int i, int j);
+/* Refactored cardEffect() Ambassador case */
 
 #endif

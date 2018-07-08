@@ -887,55 +887,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 
 	case minion:
-		//+1 action
-		state->numActions++;
-
-		//discard card from hand
-		discardCard(handPos, currentPlayer, state, 0);
-
-		if (choice1)		//+2 coins
-		{
-			state->coins = state->coins + 2;
-		}
-
-		else if (choice2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
-		{
-			//discard hand
-			while (numHandCards(state) > 0)
-			{
-				discardCard(handPos, currentPlayer, state, 0);
-			}
-
-			//draw 4
-			for (i = 0; i < 4; i++)
-			{
-				drawCard(currentPlayer, state);
-			}
-
-			//other players discard hand and redraw if hand size > 4
-			for (i = 0; i < state->numPlayers; i++)
-			{
-				if (i != currentPlayer)
-				{
-					if (state->handCount[i] > 4)
-					{
-						//discard hand
-						while (state->handCount[i] > 0)
-						{
-							discardCard(handPos, i, state, 0);
-						}
-
-						//draw 4
-						for (j = 0; j < 4; j++)
-						{
-							drawCard(i, state);
-						}
-					}
-				}
-			}
-
-		}
-		return 0;
+		return cardEffectMinion(state, handPos, currentPlayer, choice1, choice2, i);
 
 	case steward:
 		if (choice1 == 1)
@@ -1078,39 +1030,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 
 	case cutpurse:
-
-		updateCoins(currentPlayer, state, 2);
-		for (i = 0; i < state->numPlayers; i++)
-		{
-			if (i != currentPlayer)
-			{
-				for (j = 0; j < state->handCount[i]; j++)
-				{
-					if (state->hand[i][j] == copper)
-					{
-						discardCard(j, i, state, 0);
-						break;
-					}
-					if (j == state->handCount[i])
-					{
-						for (k = 0; k < state->handCount[i]; k++)
-						{
-							if (DEBUG)
-								printf("Player %d reveals card number %d\n", i, state->hand[i][k]);
-						}
-						break;
-					}
-				}
-
-			}
-
-		}
-
-		//discard played card from hand
-		discardCard(handPos, currentPlayer, state, 0);
-
-		return 0;
-
+		return cardEffectCutpurse(state, currentPlayer, handPos, i, j, k);
 
 	case embargo:
 		//+2 Coins
@@ -1334,6 +1254,93 @@ int cardEffectSmithy(struct gameState *state, int currentPlayer, int handPos, in
 
 	//discard card from hand
 	discardCard(handPos, currentPlayer, state, 0);
+	return 0;
+}
+
+int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int i){
+	//+1 action
+	state->numActions++;
+
+	//discard card from hand
+	discardCard(handPos, currentPlayer, state, 0);
+
+	if (choice1)		//+2 coins
+	{
+		state->coins = state->coins + 2;
+	}
+
+	else if (choice2)		//discard hand, redraw 4, other players with 5+ cards discard hand and draw 4
+	{
+		//discard hand
+		while (numHandCards(state) > 0)
+		{
+			discardCard(handPos, currentPlayer, state, 0);
+		}
+
+		//draw 4
+		for (i = 0; i < 4; i++)
+		{
+			drawCard(currentPlayer, state);
+		}
+
+		//other players discard hand and redraw if hand size > 4
+		for (i = 0; i < state->numPlayers; i++)
+		{
+			if (i != currentPlayer)
+			{
+				if (state->handCount[i] > 4)
+				{
+					//discard hand
+					while (state->handCount[i] > 0)
+					{
+						discardCard(handPos, i, state, 0);
+					}
+
+					//draw 4
+					for (j = 0; j < 4; j++)
+					{
+						drawCard(i, state);
+					}
+				}
+			}
+		}
+
+	}
+	return 0;
+}
+
+int cardEffectCutpurse(struct gameState *state, int currentPlayer, int handPos, int i, int j, int k){
+
+	updateCoins(currentPlayer, state, 2);
+	for (i = 0; i < state->numPlayers; i++)
+	{
+		if (i != currentPlayer)
+		{
+			for (j = 0; j < state->handCount[i]; j++)
+			{
+				if (state->hand[i][j] == copper)
+				{
+					discardCard(j, i, state, 0);
+					break;
+				}
+				if (j == state->handCount[i])
+				{
+					for (k = 0; k < state->handCount[i]; k++)
+					{
+						if (DEBUG)
+							printf("Player %d reveals card number %d\n", i, state->hand[i][k]);
+					}
+					break;
+				}
+			}
+
+		}
+
+	}
+
+	//discard played card from hand
+	discardCard(handPos, currentPlayer, state, 0);
+
 	return 0;
 }
 

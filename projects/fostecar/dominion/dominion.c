@@ -667,7 +667,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	switch (card)
 	{
 	case adventurer:
-		return cardEffectAdventurer(state);
+		return cardEffectAdventurer(state, drawntreasure, currentPlayer, temphand, cardDrawn, z);
       /*printf("Adventurer Test\n");
       while(drawntreasure<2){
 	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
@@ -1330,7 +1330,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 
-int cardEffectAdventurer(struct gameState *state, int drawnTreasure, int currentPlayer, int *temphand, int cardDrawn, int z) {
+int cardEffectAdventurer(struct gameState *state, int drawntreasure, int currentPlayer, int *temphand, int cardDrawn, int z) {
 	printf("Adventurer Test\n");
 	while (drawntreasure<2) {
 		if (state->deckCount[currentPlayer] <1) {//if the deck is empty we need to shuffle discard and add to deck

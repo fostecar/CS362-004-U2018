@@ -811,6 +811,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 		
 	case smithy:
+		i = 0;
 		return cardEffectSmithy(state, currentPlayer, handPos, i);
 
 	case village:
@@ -887,6 +888,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 
 	case minion:
+		i = 0;
+		j = 0;
 		return cardEffectMinion(state, handPos, currentPlayer, choice1, choice2, i, j);
 
 	case steward:
@@ -972,9 +975,14 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 
 	case ambassador:
+		i = 0;
+		j = 0;
 		return cardEffectAmbassador(state, currentPlayer, handPos, choice1, choice2, i, j);
 
 	case cutpurse:
+		i = 0;
+		j = 0;
+		k = 0;
 		return cardEffectCutpurse(state, currentPlayer, handPos, i, j, k);
 
 	case embargo:

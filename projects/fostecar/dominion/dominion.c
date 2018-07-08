@@ -887,7 +887,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 
 	case minion:
-		return cardEffectMinion(state, handPos, currentPlayer, choice1, choice2, i);
+		return cardEffectMinion(state, handPos, currentPlayer, choice1, choice2, i, j);
 
 	case steward:
 		if (choice1 == 1)
@@ -1257,7 +1257,7 @@ int cardEffectSmithy(struct gameState *state, int currentPlayer, int handPos, in
 	return 0;
 }
 
-int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int i){
+int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int i, int j){
 	//+1 action
 	state->numActions++;
 

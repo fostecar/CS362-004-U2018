@@ -134,7 +134,7 @@ int cardEffectAdventurer(struct gameState *state, int drawntreasure, int current
 int cardEffectSmithy(struct gameState *state, int currentPlayer, int handPos, int i);
 /* Refactored cardEffect() Smithy case*/
 
-int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int i);
+int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int i, int j);
 /* Refactored cardEffect() Minion case*/
 
 int cardEffectCutpurse(struct gameState *state, int currentPlayer, int handPos, int i, int j, int k);

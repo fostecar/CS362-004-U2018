@@ -668,27 +668,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	{
 	case adventurer:
 		return cardEffectAdventurer(state, drawntreasure, currentPlayer, temphand, cardDrawn, z);
-      /*printf("Adventurer Test\n");
-      while(drawntreasure<2){
-	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
-	  shuffle(currentPlayer, state);
-	}
-	drawCard(currentPlayer, state);
-	cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-	if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-	  drawntreasure++;
-	else{
-	  temphand[z]=cardDrawn;
-	  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-	  z++;
-	}
-      }
-      while(z-1>=0){
-	state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
-	z=z-1;
-      }
-      return 0;*/
-			
+
 	case council_room:
 		//+4 Cards
 		for (i = 0; i < 4; i++)
@@ -831,15 +811,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		return 0;
 		
 	case smithy:
-		//+3 Cards
-		for (i = 0; i < 3; i++)
-		{
-			drawCard(currentPlayer, state);
-		}
-
-		//discard card from hand
-		discardCard(handPos, currentPlayer, state, 0);
-		return 0;
+		return cardEffectSmithy(state, currentPlayer, handPos);
 
 	case village:
 		//+1 Card
@@ -1350,6 +1322,18 @@ int cardEffectAdventurer(struct gameState *state, int drawntreasure, int current
 		state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[z - 1]; // discard all cards in play that have been drawn
 		z = z - 1;
 	}
+	return 0;
+}
+
+int cardEffectSmithy(struct gameState *state, int currentPlayer, int handPos){
+	//+3 Cards
+	for (i = 0; i < 3; i++)
+	{
+		drawCard(currentPlayer, state);
+	}
+
+	//discard card from hand
+	discardCard(handPos, currentPlayer, state, 0);
 	return 0;
 }
 

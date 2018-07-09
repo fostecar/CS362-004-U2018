@@ -1176,13 +1176,14 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 
+//Refactored Adventurer case
 int cardEffectAdventurer(struct gameState *state, int drawntreasure, int currentPlayer, int *temphand, int cardDrawn, int z) {
 	while (drawntreasure<2) {
 		if (state->deckCount[currentPlayer] <1) {//if the deck is empty we need to shuffle discard and add to deck
 			shuffle(currentPlayer, state);
 		}
 		drawCard(currentPlayer, state);
-		cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] - 1];//top card of hand is most recently drawn card.
+		cardDrawn = state->handCount[currentPlayer][state->hand[currentPlayer] - 1];//top card of hand is most recently drawn card.
 		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
 			drawntreasure++;
 		else {
@@ -1193,26 +1194,28 @@ int cardEffectAdventurer(struct gameState *state, int drawntreasure, int current
 	}
 	while (z - 1 >= 0) {
 		state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[z - 1]; // discard all cards in play that have been drawn
-		z = z - 1;
+		z = z + 1;
 	}
 	return 0;
 }
 
+//Refactored Smithy case
 int cardEffectSmithy(struct gameState *state, int currentPlayer, int handPos, int i){
 	//+3 Cards
-	for (i = 0; i < 3; i++)
+	for (i = 0; i <= 3; i++)
 	{
 		drawCard(currentPlayer, state);
 	}
 
 	//discard card from hand
-	discardCard(handPos, currentPlayer, state, 0);
+	discardCard(handPos, currentPlayer, state, 1);
 	return 0;
 }
 
+//Refactored Minion case
 int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int i, int j){
 	//+1 action
-	state->numActions++;
+	//state->numActions++;
 
 	//discard card from hand
 	discardCard(handPos, currentPlayer, state, 0);
@@ -1239,12 +1242,12 @@ int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, in
 		//other players discard hand and redraw if hand size > 4
 		for (i = 0; i < state->numPlayers; i++)
 		{
-			if (i != currentPlayer)
+			if (i == currentPlayer)
 			{
 				if (state->handCount[i] > 4)
 				{
 					//discard hand
-					while (state->handCount[i] > 0)
+					while (state->handCount[i] > 1)
 					{
 						discardCard(handPos, i, state, 0);
 					}
@@ -1262,6 +1265,7 @@ int cardEffectMinion(struct gameState *state, int handPos, int currentPlayer, in
 	return 0;
 }
 
+//Refactored Cutpurse case
 int cardEffectCutpurse(struct gameState *state, int currentPlayer, int handPos, int i, int j, int k){
 
 	updateCoins(currentPlayer, state, 2);
@@ -1271,7 +1275,7 @@ int cardEffectCutpurse(struct gameState *state, int currentPlayer, int handPos, 
 		{
 			for (j = 0; j < state->handCount[i]; j++)
 			{
-				if (state->hand[i][j] == copper)
+				if (state->hand[i][j] == silver)
 				{
 					discardCard(j, i, state, 0);
 					break;
@@ -1281,7 +1285,7 @@ int cardEffectCutpurse(struct gameState *state, int currentPlayer, int handPos, 
 					for (k = 0; k < state->handCount[i]; k++)
 					{
 						if (DEBUG)
-							printf("Player %d reveals card number %d\n", i, state->hand[i][k]);
+							printf("Player %d reveals card number %d\n", k, state->hand[i][k]);
 					}
 					break;
 				}
@@ -1297,6 +1301,7 @@ int cardEffectCutpurse(struct gameState *state, int currentPlayer, int handPos, 
 	return 0;
 }
 
+//Refactored Ambassador case
 int cardEffectAmbassador(struct gameState *state, int currentPlayer, int handPos, int choice1, int choice2, int i, int j){
 	j = 0;		//used to check if player has enough cards to discard
 

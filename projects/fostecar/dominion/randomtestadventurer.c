@@ -52,7 +52,8 @@ int gameStateRandomSetup(struct gameState *testGS, int *deckTreasure1, int *deck
 
 
 	//game player setup
-	testGS.numPlayers = rand() % (MAX_PLAYERS + 1 - 1) + 1; //1-4
+	i = rand() % (MAX_PLAYERS + 1 - 1) + 1; //1-4
+	testGS.numPlayers = i;
 	testGS.whoseTurn = rand() % testGS.numPlayers;
 
 	//hand setup

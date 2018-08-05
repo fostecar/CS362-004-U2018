@@ -34,8 +34,8 @@ int main() {
 		printf("\nTest Number %d Begin\n", i);
 		z = 0;
 		drawtreasure = 0;
-		gameStateRandomSetup(testGS, &deckTreasure1, &deckTreasure2, &discardTreasureNum);
-		cardEffectAdventurer(testGS, drawntreasure, testGS.whoseTurn, &temphand, cardDrawn, z);
+		gameStateRandomSetup(&testGS, &deckTreasure1, &deckTreasure2, &discardTreasureNum);
+		cardEffectAdventurer(&testGS, drawntreasure, testGS.whoseTurn, &temphand, cardDrawn, z);
 		printf("\nTest Number %d End\n", i);
 	}
 

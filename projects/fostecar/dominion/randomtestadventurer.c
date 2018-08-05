@@ -46,7 +46,7 @@ int main() {
 	
 }
 
-int gameStateRandomSetup(struct gameState *state, int *deckTreasure1, int *deckTreasure2, int *discardTreasureNum) {
+int gameStateRandomSetup(struct gameState *testGS, int *deckTreasure1, int *deckTreasure2, int *discardTreasureNum) {
 	int i = -5;
 	srand(time(0));
 

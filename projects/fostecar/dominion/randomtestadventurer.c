@@ -43,7 +43,7 @@ int main() {
 
 
 	for (i = 0; i < numTestRuns; ++i) {
-		printf("Test Number %d Begin\n", i);
+		printf("Test Number %d Begin\n", (i+1));
 		z = 0;
 		drawntreasure = 0;
 		gameStateRandomSetup(&testGS, &deckTreasure1, &deckTreasure2, &deckTreasureNum, &discardTreasureNum, temphand); //setup

@@ -42,7 +42,7 @@ int main() {
 	printf("\nTest Complete\n");
 
 
-	return 1;
+	return 0;
 	
 }
 
@@ -105,7 +105,7 @@ int gameStateRandomSetup(struct gameState *testGS, int *deckTreasure1, int *deck
 		}
 	}
 
-	return 1;
+	return 0;
 
 }
 

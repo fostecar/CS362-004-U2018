@@ -53,7 +53,7 @@ int main() {
 			++numTestRunsFailed;
 		}
 
-		printf("Test Number %d End\n\n", i);
+		printf("Test Number %d End\n\n", (i + 1));
 	}
 
 	printf("Total Runs PASSED : %d\n", (numTestRuns - numTestRunsFailed));

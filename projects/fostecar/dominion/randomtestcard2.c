@@ -61,7 +61,7 @@ int main() {
 			++numTestRunsFailed;
 		}
 
-		printf("Test Number %d End\n\n", i);
+		printf("Test Number %d End\n\n", (i + 1));
 	}
 
 	printf("Total Runs PASSED : %d\n", (numTestRuns - numTestRunsFailed));
@@ -145,7 +145,7 @@ int testResults(struct gameState *testGS, int *origHandCnt, int origPlayedCardCn
 	int x = -5;
 
 	printf("Num Coins: original = %d, current = %d\n", origCoins, (*testGS).coins);
-	printf("Hand Cnt: (Current Player) original = %d, current = %d\n", origHandCnt[(*testGS).whoseTurn], (*testGS).handCount[(*testGS).whoseTurn]);
+	printf("Hand Cnt: (Current Player %d) original = %d, current = %d\n", (*testGS).whoseTurn, origHandCnt[(*testGS).whoseTurn], (*testGS).handCount[(*testGS).whoseTurn]);
 	for (i = 0; i < (*testGS).numPlayers; ++i) {
 		if (i != (*testGS).whoseTurn) {
 			printf("Hand Cnt: (Player %d) original = %d, current = %d\n", i, origHandCnt[i], (*testGS).handCount[i]);

@@ -1178,6 +1178,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 
 //Refactored Adventurer case
 int cardEffectAdventurer(struct gameState *state, int drawntreasure, int currentPlayer, int *temphand, int cardDrawn, int z) {
+	//printf("cardEffectAdventurer entered\n");
 	while (drawntreasure<2) {
 		if (state->deckCount[currentPlayer] <1) {//if the deck is empty we need to shuffle discard and add to deck
 			shuffle(currentPlayer, state);
@@ -1192,10 +1193,14 @@ int cardEffectAdventurer(struct gameState *state, int drawntreasure, int current
 			z++;
 		}
 	}
+	//printf("first while loop complete (z = %d)\n", z);
 	while (z - 1 >= 0) {
+		//printf("inside second while loop, z = %d", z);
 		state->discard[currentPlayer][state->discardCount[currentPlayer]++] = temphand[z - 1]; // discard all cards in play that have been drawn
-		z = z + 1;
+		//z = z + 1;
+		z = z - 2;
 	}
+	//printf("second while loop complete\n");
 	return 0;
 }
 

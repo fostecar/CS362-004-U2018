@@ -43,7 +43,7 @@ int main() {
 
 
 	for (i = 0; i < numTestRuns; ++i) {
-		printf("Test Number %d Begin\n", (i+1));
+		printf("Test Number %d Begin\n", (i + 1));
 		z = 0;
 		drawntreasure = 0;
 		gameStateRandomSetup(&testGS, &deckTreasure1, &deckTreasure2, &deckTreasureNum, &discardTreasureNum, temphand); //setup
@@ -57,7 +57,7 @@ int main() {
 			++numTestRunsFailed;
 		}
 
-		printf("Test Number %d End\n\n", i);
+		printf("Test Number %d End\n\n", (i + 1));
 	}
 
 	printf("Total Runs PASSED : %d\n", (numTestRuns - numTestRunsFailed));

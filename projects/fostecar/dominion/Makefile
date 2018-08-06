@@ -42,6 +42,39 @@ randTestSmithy: randomtestcard1.c dominion.o rngs.o
 randTestCutpurse: randomtestcard2.c dominion.o rngs.o
 	gcc -o randTestCutpurse randomtestcard2.c -g dominion.o rngs.o $(CFLAGS)
 
+resultsAdventurer: randomtestadventurer.out
+
+randomtestadventurer.out: randomtestadventurer.c dominion.c rngs.c
+	echo "Result for running Adventurer random test:" > randomtestadventurer.out
+	
+	echo "randomtestadventurer.c:" >> randomtestadventurer.out
+	gcc -o randTestAdventurer dominion.c rngs.c randomtestadventurer.c $(CFLAGS)
+	randTestAdventurer >> randomtestadventurer.out
+	gcov randomtestadventurer.c -b >> randomtestadventurer.out
+
+resultsCard1: randomtestcard1.out
+
+randomtestcard1.out: randomtestcard1.c dominion.c rngs.c
+	echo "Result for running Smithy random test:" > randomtestcard1.out
+	
+	echo "randomtestcard2.c:" >> randomtestcard1.out
+	gcc -o randTestSmithy dominion.c rngs.c randomtestcard1.c $(CFLAGS)
+	randTestSmithy >> randomtestcard1.out
+	gcov randomtestcard1.c -b >> randomtestcard1.out
+
+
+resultsCard2: randomtestcard2.out
+
+randomtestcard2.out: randomtestcard2.c dominion.c rngs.c
+	echo "Result for running Cutpurse random test:" > randomtestcard2.out
+	
+	echo "randomtestcard2.c:" >> randomtestcard2.out
+	gcc -o randTestCutpurse dominion.c rngs.c randomtestcard2.c $(CFLAGS)
+	randTestCutpurse >> randomtestcard2.out
+	gcov randomtestcard2.c -b >> randomtestcard2.out
+
+runAllRandTests: resultsAdventurer resultsCard1 resultsCard2
+
 
 all: playdom player 
 

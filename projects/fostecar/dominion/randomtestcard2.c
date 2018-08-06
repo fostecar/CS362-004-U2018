@@ -28,7 +28,7 @@ int main() {
 	int x = -5;
 	int y = -5;
 	int z = -5;
-	int numTestRuns = 5;
+	int numTestRuns = 50;
 	int result = 0;
 	int numTestRunsFailed = 0;
 
@@ -54,6 +54,12 @@ int main() {
 		}
 		origCoins = testGS.coins;
 		origPlayedCardCnt = testGS.playedCardCount;
+
+		if (i == (numTestRuns - 1)) {
+			origCoins = -1;
+			origHandCnt[testGS.whoseTurn] = -1;
+		}
+
 		cardEffectCutpurse(&testGS, testGS.whoseTurn, handPos, x, y, z); //run the function under test
 		result = testResults(&testGS, origHandCnt, origPlayedCardCnt, origCoins, origNumCoppers); //check result
 

@@ -32,10 +32,10 @@ int main() {
 	int deckTreasureNum = -5;
 	int discardTreasureNum = -5;
 
-	int drawntreasure = -5;
+	//int drawntreasure = -5;
 	int temphand[MAX_DECK];
-	int cardDrawn = -5;
-	int z = -5;
+	//int cardDrawn = -5;
+	//int z = -5;
 
 	int origHandCnt = -5;
 	int origDeckCnt = -5;
@@ -44,13 +44,24 @@ int main() {
 
 	for (i = 0; i < numTestRuns; ++i) {
 		printf("Test Number %d Begin\n", (i + 1));
-		z = 0;
-		drawntreasure = 0;
+		//z = 0;
+		//drawntreasure = 0;
 		gameStateRandomSetup(&testGS, &deckTreasure1, &deckTreasure2, &deckTreasureNum, &discardTreasureNum, temphand); //setup
 		origHandCnt = testGS.handCount[testGS.whoseTurn];
 		origDeckCnt = testGS.deckCount[testGS.whoseTurn];
 		origDiscardCnt = testGS.discardCount[testGS.whoseTurn];
-		cardEffectAdventurer(&testGS, drawntreasure, testGS.whoseTurn, temphand, cardDrawn, z); //run the function under test
+		//cardEffectAdventurer(&testGS, drawntreasure, testGS.whoseTurn, temphand, cardDrawn, z); //run the function under test
+
+		/////////////////////////////////////////////////////////////////
+		//Update for Assignment5
+		int choice1 = -5;
+		int choice2 = -5;
+		int choice3 = -5;
+		int bonus = -5;
+		int handPos = -5;
+		cardEffect(adventurer, choice1, choice2, choice3, &testGS, handPos, &bonus);
+		/////////////////////////////////////////////////////////////////
+
 		result = testResults(&testGS, origHandCnt, origDeckCnt, origDiscardCnt, temphand, deckTreasure1, deckTreasure2, deckTreasureNum, discardTreasureNum); //check result
 
 		if (result == 1) {

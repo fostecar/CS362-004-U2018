@@ -25,9 +25,9 @@ int main() {
 
 	int i = -5;
 	int j = -5;
-	int x = -5;
-	int y = -5;
-	int z = -5;
+	//int x = -5;
+	//int y = -5;
+	//int z = -5;
 	int numTestRuns = 50;
 	int result = 0;
 	int numTestRunsFailed = 0;
@@ -45,9 +45,9 @@ int main() {
 
 	for (i = 0; i < numTestRuns; ++i) {
 		printf("Test Number %d Begin\n", (i + 1));
-		x = 0;
-		y = 0;
-		z = 0;
+		//x = 0;
+		//y = 0;
+		//z = 0;
 		gameStateRandomSetup(&testGS, &handPos, origNumCoppers); //setup
 		for (j = 0; j < MAX_PLAYERS; ++j) {
 			origHandCnt[j] = testGS.handCount[j];
@@ -60,7 +60,18 @@ int main() {
 			origHandCnt[testGS.whoseTurn] = -1;
 		}
 
-		cardEffectCutpurse(&testGS, testGS.whoseTurn, handPos, x, y, z); //run the function under test
+		//cardEffectCutpurse(&testGS, testGS.whoseTurn, handPos, x, y, z); //run the function under test
+
+		/////////////////////////////////////////////////////////////////
+		//Update for Assignment5
+		int choice1 = -5;
+		int choice2 = -5;
+		int choice3 = -5;
+		int bonus = -5;
+		cardEffect(cutpurse, choice1, choice2, choice3, &testGS, handPos, &bonus);
+		/////////////////////////////////////////////////////////////////
+
+
 		result = testResults(&testGS, origHandCnt, origPlayedCardCnt, origCoins, origNumCoppers); //check result
 
 		if (result == 1) {

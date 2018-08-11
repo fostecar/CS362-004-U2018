@@ -37,6 +37,9 @@ all: playdom player
 
 clean:
 	rm -f *.o playdom.exe playdom player player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe *.exe
+	rm -f testGetCost testGetCost.exe testFullDeckCount testFullDeckCount.exe testKingdomCards testKingdomCards.ece testHandCard testHandCard.exe
+	rm -f testSmithy testSmithy.exe testAdventurer testAdventurer.exe testCutpurse testCutpurse.exe testCouncilRoom testCouncilRoom.exe
+	rm -f randTestAdventurer randTestAdventurer.exe randTestSmithy randTestSmithy.exe randTestCutpurse randTestCutpurse.exe
 
 ############################################################################
 #Unit Tests from Assignment - 3
@@ -83,3 +86,6 @@ randTestSmithy: randomtestcard1.c dominion.o rngs.o
 randTestCutpurse: randomtestcard2.c dominion.o rngs.o
 	gcc -o randTestCutpurse randomtestcard2.c -g dominion.o rngs.o $(CFLAGS)
 
+############################################################################
+#Make All Tests from Assign3 & Assign4
+allTests: testGetCost testFullDeckCount testKingdomCards testHandCard testSmithy testAdventurer testCutpurse testCouncilRoom randTestAdventurer randTestSmithy randTestCutpurse

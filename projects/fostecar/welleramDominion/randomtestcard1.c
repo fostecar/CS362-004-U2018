@@ -22,7 +22,7 @@ int main() {
 	srand(time(NULL));
 
 	int i = -5;
-	int z = -5;
+	//int z = -5;
 	int numTestRuns = 50;
 	int result = 0;
 	int numTestRunsFailed = 0;
@@ -40,13 +40,24 @@ int main() {
 
 	for (i = 0; i < numTestRuns; ++i) {
 		printf("Test Number %d Begin\n", (i + 1));
-		z = 0;
+		//z = 0;
 		gameStateRandomSetup(&testGS, &handPos); //setup
 		origHandCnt = testGS.handCount[testGS.whoseTurn];
 		origDeckCnt = testGS.deckCount[testGS.whoseTurn];
 		origDiscardCnt = testGS.discardCount[testGS.whoseTurn];
 		origPlayedCardCnt = testGS.playedCardCount;
-		cardEffectSmithy(&testGS, testGS.whoseTurn, handPos, z); //run the function under test
+		//cardEffectSmithy(&testGS, testGS.whoseTurn, handPos, z); //run the function under test
+
+		/////////////////////////////////////////////////////////////////
+		//Update for Assignment5
+		int choice1 = -5;
+		int choice2 = -5;
+		int choice3 = -5;
+		int bonus = -5;
+		cardEffect(smithy, choice1, choice2, choice3, &testGS, handPos, &bonus);
+		/////////////////////////////////////////////////////////////////
+
+
 		result = testResults(&testGS, origHandCnt, origDeckCnt, origDiscardCnt, origPlayedCardCnt); //check result
 
 		if (result == 1) {

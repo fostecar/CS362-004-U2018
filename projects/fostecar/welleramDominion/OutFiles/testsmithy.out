@@ -1,0 +1,39 @@
+Result for running Smithy unit test:
+cardtest1.c:
+
+Begin Card Test - Smithy
+***Test 1 (deckCount > 3)***
+Starting Conditions: deck count = 5, hand count = 5 (smithy at pos 2), played card count = 0
+FAIL : Deck Count incorrect after card played (should be 2, value is 1)
+FAIL : Hand Count incorrect after card played (should be 7, value is 8)
+PASS : Smithy NOT found in hand
+PASS : Played Card Count incremented to 1 is correct
+PASS : Smithy is last card in playedCards
+PASS : function return of 0 is correct
+***Test 2 (deckCount < 3, deckCount + discardCount > 3)***
+Starting Conditions: deck count = 2, hand count = 5 (smithy at pos 0), discard count = 2, played card count = 1
+FAIL : Deck Count incorrect after card played (should be 1, value is 0)
+FAIL : Hand Count incorrect after card played (should be 7, value is 8)
+PASS : Smithy NOT found in hand
+PASS : Played Card Count incremented to 2 is correct
+PASS : Smithy is last card in playedCards
+PASS : function return of 0 is correct
+PASS : discard count is 0
+***Test 3 (deckCount < 3, deckCount + discardCount < 3)***
+Starting Conditions: deck count = 1, hand count = 5 (smithy at pos 4), discard count = 1, played card count = 0
+PASS : Deck Count correct after card played
+PASS : Hand Count correct after card played
+PASS : Smithy NOT found in hand
+PASS : Played Card Count incremented to 1 is correct
+PASS : Smithy is last card in playedCards
+PASS : function return of 0 is correct
+PASS : discard count is 0
+End Card Test - Smithy
+
+File 'dominion.c'
+Lines executed:12.41% of 572
+Branches executed:7.58% of 422
+Taken at least once:5.69% of 422
+Calls executed:8.00% of 100
+Creating 'dominion.c.gcov'
+

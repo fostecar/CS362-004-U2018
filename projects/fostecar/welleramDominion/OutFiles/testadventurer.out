@@ -1,0 +1,82 @@
+Result for running Adventurer unit test:
+cardtest2.c:
+
+Begin Card Test - Adventurer
+*** Test 1 ***
+Starting Conditions: top two cards in deck are treasure cards
+PASS : Deck Count correct after card played
+FAIL : Hand Count incorrect after card played (should be 2, value is 0)
+FAIL : Discard Count incorrect after card played (should be 0, value is 3)
+FAIL : Played Card Count is incorrect, value is 0, correct value is 1
+FAIL : Adventurer is NOT the last card in played Cards, value is -1
+FAIL : Incorrect number of treasures found in hand 0, correct count is 2
+FAIL : hand search for Adventure failed.
+FAIL: function return of -1 is NOT correct, correct return is 0
+*** Test 2 ***
+Starting Conditions: mixed two cards in deck are treasure cards
+PASS : Deck Count correct after card played
+FAIL : Hand Count incorrect after card played (should be 2, value is 0)
+FAIL : Discard Count incorrect after card played (should be 2, value is 5)
+FAIL : Played Card Count is incorrect, value is 0, correct value is 1
+FAIL : Adventurer is NOT the last card in played Cards, value is -1
+FAIL : Incorrect number of treasures found in hand 0, correct count is 2
+FAIL : hand search for Adventure failed.
+FAIL: function return of -1 is NOT correct, correct return is 0
+*** Test 3 ***
+Starting Conditions: one treasure in deck, one treasure in discard
+PASS : Deck Count correct after card played
+FAIL : Hand Count incorrect after card played (should be 3, value is 1)
+FAIL : Played Card Count is incorrect, value is 0, correct value is 1
+FAIL : Adventurer is NOT the last card in played Cards, value is -1
+FAIL : Incorrect number of treasures found in hand 1, correct count is 2
+PASS : Adventurer NOT found in hand
+FAIL: function return of -1 is NOT correct, correct return is 0
+*** Test 4 ***
+Starting Conditions: zero treasures in deck, two treasures in discard
+PASS : Deck Count correct after card played
+FAIL : Hand Count incorrect after card played (should be 4, value is 2)
+FAIL : Played Card Count is incorrect, value is 0, correct value is 1
+FAIL : Adventurer is NOT the last card in played Cards, value is -1
+FAIL : Incorrect number of treasures found in hand 2, correct count is 2
+PASS : Adventurer NOT found in hand
+FAIL : Discard Count is incorrect, value is 5, correct value is 2
+FAIL: function return of -1 is NOT correct, correct return is 0
+*** Test 5 ***
+Starting Conditions: one treasure in deck, zero treasures in discard
+PASS : Deck Count correct after card played
+FAIL : Hand Count incorrect after card played (should be 1, value is -490)
+FAIL : Played Card Count is incorrect, value is 0, correct value is 1
+FAIL : Adventurer is NOT the last card in played Cards, value is -1
+FAIL : Incorrect number of treasure cards found in hand 0, correct count is 1
+FAIL : hand search for Adventure failed.
+FAIL : Discard Count is incorrect, value is 0, correct value is 9
+FAIL: function return of -1 is NOT correct, correct return is 0
+*** Test 6 ***
+Starting Conditions: zero treasures in deck, one treasures in discard
+PASS : Deck Count correct after card played
+FAIL : Hand Count incorrect after card played (should be 3, value is -488)
+FAIL : Played Card Count is incorrect, value is 0, correct value is 1
+FAIL : Adventurer is NOT the last card in played Cards, value is -1
+FAIL : Incorrect number of treasure cards found in hand 0, correct count is 1
+FAIL : hand search for Adventure failed.
+FAIL : Discard Count is incorrect, value is 0, correct value is 9
+FAIL: function return of -1 is NOT correct, correct return is 0
+*** Test 7 ***
+Starting Conditions: zero treasures in deck, zero treasures in discard
+PASS : Deck Count correct after card played
+FAIL : Hand Count incorrect after card played (should be 0, value is -498)
+FAIL : Played Card Count is incorrect, value is 0, correct value is 1
+FAIL : Adventurer is NOT the last card in played Cards, value is -1
+PASS : 0 treasure cards found in hand
+FAIL : hand search for Adventure failed.
+FAIL : Discard Count is incorrect, value is 501, correct value is 2
+FAIL: function return of -1 is NOT correct, correct return is 0
+End Card Test - Adventurer
+
+File 'dominion.c'
+Lines executed:13.64% of 572
+Branches executed:13.74% of 422
+Taken at least once:8.53% of 422
+Calls executed:8.00% of 100
+Creating 'dominion.c.gcov'
+

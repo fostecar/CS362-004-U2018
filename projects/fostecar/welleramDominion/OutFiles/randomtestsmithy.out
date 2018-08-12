@@ -1,0 +1,485 @@
+Result for running Smithy random test:
+randomtestcard1.c:
+SMITHY TEST
+
+Test Number 1 Begin
+Hand Cnt: original = 76, current = 79
+Deck Cnt: original = 5, current = 1
+Discard Cnt: original = 1, current = 1
+Played Card Cnt: original = 33, current = 34
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 1 End
+
+Test Number 2 Begin
+Hand Cnt: original = 123, current = 126
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 2, current = 2
+Played Card Cnt: original = 40, current = 41
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 2 End
+
+Test Number 3 Begin
+Hand Cnt: original = 460, current = 463
+Deck Cnt: original = 1, current = 2
+Discard Cnt: original = 5, current = 0
+Played Card Cnt: original = 155, current = 156
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 3 End
+
+Test Number 4 Begin
+Hand Cnt: original = 53, current = 56
+Deck Cnt: original = 5, current = 1
+Discard Cnt: original = 5, current = 5
+Played Card Cnt: original = 238, current = 239
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 4 End
+
+Test Number 5 Begin
+Hand Cnt: original = 127, current = 130
+Deck Cnt: original = 0, current = 1
+Discard Cnt: original = 5, current = 0
+Played Card Cnt: original = 234, current = 235
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.5) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 5 End
+
+Test Number 6 Begin
+Hand Cnt: original = 120, current = 120
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 171, current = 172
+All Tests Passed!
+Test Number 6 End
+
+Test Number 7 Begin
+Hand Cnt: original = 157, current = 160
+Deck Cnt: original = 1, current = 2
+Discard Cnt: original = 5, current = 0
+Played Card Cnt: original = 308, current = 309
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 7 End
+
+Test Number 8 Begin
+Hand Cnt: original = 340, current = 339
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 314, current = 315
+All Tests Passed!
+Test Number 8 End
+
+Test Number 9 Begin
+Hand Cnt: original = 419, current = 422
+Deck Cnt: original = 3, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 59, current = 60
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 2
+Test Number 9 End
+
+Test Number 10 Begin
+Hand Cnt: original = 206, current = 207
+Deck Cnt: original = 2, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 73, current = 74
+All Tests Passed!
+Test Number 10 End
+
+Test Number 11 Begin
+Hand Cnt: original = 210, current = 213
+Deck Cnt: original = 2, current = 1
+Discard Cnt: original = 3, current = 0
+Played Card Cnt: original = 394, current = 395
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 11 End
+
+Test Number 12 Begin
+Hand Cnt: original = 226, current = 229
+Deck Cnt: original = 5, current = 1
+Discard Cnt: original = 5, current = 5
+Played Card Cnt: original = 92, current = 93
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 12 End
+
+Test Number 13 Begin
+Hand Cnt: original = 500, current = 503
+Deck Cnt: original = 3, current = 2
+Discard Cnt: original = 3, current = 0
+Played Card Cnt: original = 163, current = 164
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 3
+Test Number 13 End
+
+Test Number 14 Begin
+Hand Cnt: original = 47, current = 47
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 306, current = 307
+All Tests Passed!
+Test Number 14 End
+
+Test Number 15 Begin
+Hand Cnt: original = 398, current = 401
+Deck Cnt: original = 3, current = 1
+Discard Cnt: original = 2, current = 0
+Played Card Cnt: original = 458, current = 459
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 3
+Test Number 15 End
+
+Test Number 16 Begin
+Hand Cnt: original = 481, current = 480
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 305, current = 306
+All Tests Passed!
+Test Number 16 End
+
+Test Number 17 Begin
+Hand Cnt: original = 297, current = 300
+Deck Cnt: original = 3, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 231, current = 232
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 2
+Test Number 17 End
+
+Test Number 18 Begin
+Hand Cnt: original = 309, current = 312
+Deck Cnt: original = 3, current = 4
+Discard Cnt: original = 5, current = 0
+Played Card Cnt: original = 61, current = 62
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 3
+Test Number 18 End
+
+Test Number 19 Begin
+Hand Cnt: original = 48, current = 50
+Deck Cnt: original = 3, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 44, current = 45
+All Tests Passed!
+Test Number 19 End
+
+Test Number 20 Begin
+Hand Cnt: original = 422, current = 425
+Deck Cnt: original = 3, current = 4
+Discard Cnt: original = 5, current = 0
+Played Card Cnt: original = 330, current = 331
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 3
+Test Number 20 End
+
+Test Number 21 Begin
+Hand Cnt: original = 253, current = 256
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 4, current = 4
+Played Card Cnt: original = 462, current = 463
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 21 End
+
+Test Number 22 Begin
+Hand Cnt: original = 154, current = 154
+Deck Cnt: original = 1, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 257, current = 258
+All Tests Passed!
+Test Number 22 End
+
+Test Number 23 Begin
+Hand Cnt: original = 376, current = 379
+Deck Cnt: original = 3, current = 3
+Discard Cnt: original = 4, current = 0
+Played Card Cnt: original = 204, current = 205
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 3
+Test Number 23 End
+
+Test Number 24 Begin
+Hand Cnt: original = 401, current = 402
+Deck Cnt: original = 2, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 259, current = 260
+All Tests Passed!
+Test Number 24 End
+
+Test Number 25 Begin
+Hand Cnt: original = 40, current = 43
+Deck Cnt: original = 2, current = 2
+Discard Cnt: original = 4, current = 0
+Played Card Cnt: original = 156, current = 157
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 25 End
+
+Test Number 26 Begin
+Hand Cnt: original = 233, current = 233
+Deck Cnt: original = 1, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 51, current = 52
+All Tests Passed!
+Test Number 26 End
+
+Test Number 27 Begin
+Hand Cnt: original = 172, current = 172
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 96, current = 97
+All Tests Passed!
+Test Number 27 End
+
+Test Number 28 Begin
+Hand Cnt: original = 443, current = 443
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 95, current = 96
+All Tests Passed!
+Test Number 28 End
+
+Test Number 29 Begin
+Hand Cnt: original = 203, current = 206
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 2, current = 2
+Played Card Cnt: original = 112, current = 113
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 29 End
+
+Test Number 30 Begin
+Hand Cnt: original = 79, current = 82
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 71, current = 72
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 30 End
+
+Test Number 31 Begin
+Hand Cnt: original = 73, current = 76
+Deck Cnt: original = 3, current = 3
+Discard Cnt: original = 4, current = 0
+Played Card Cnt: original = 25, current = 26
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 3
+Test Number 31 End
+
+Test Number 32 Begin
+Hand Cnt: original = 482, current = 485
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 4, current = 4
+Played Card Cnt: original = 379, current = 380
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 32 End
+
+Test Number 33 Begin
+Hand Cnt: original = 369, current = 370
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 2, current = 0
+Played Card Cnt: original = 292, current = 293
+All Tests Passed!
+Test Number 33 End
+
+Test Number 34 Begin
+Hand Cnt: original = 345, current = 347
+Deck Cnt: original = 2, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 49, current = 50
+All Tests Passed!
+Test Number 34 End
+
+Test Number 35 Begin
+Hand Cnt: original = 416, current = 418
+Deck Cnt: original = 3, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 278, current = 279
+All Tests Passed!
+Test Number 35 End
+
+Test Number 36 Begin
+Hand Cnt: original = 365, current = 368
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 2, current = 2
+Played Card Cnt: original = 153, current = 154
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 36 End
+
+Test Number 37 Begin
+Hand Cnt: original = 138, current = 141
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 331, current = 332
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 37 End
+
+Test Number 38 Begin
+Hand Cnt: original = 406, current = 409
+Deck Cnt: original = 2, current = 1
+Discard Cnt: original = 3, current = 0
+Played Card Cnt: original = 190, current = 191
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 38 End
+
+Test Number 39 Begin
+Hand Cnt: original = 208, current = 211
+Deck Cnt: original = 5, current = 1
+Discard Cnt: original = 5, current = 5
+Played Card Cnt: original = 347, current = 348
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 39 End
+
+Test Number 40 Begin
+Hand Cnt: original = 245, current = 248
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 4, current = 0
+Played Card Cnt: original = 338, current = 339
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.5) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 40 End
+
+Test Number 41 Begin
+Hand Cnt: original = 125, current = 128
+Deck Cnt: original = 2, current = 2
+Discard Cnt: original = 4, current = 0
+Played Card Cnt: original = 431, current = 432
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 41 End
+
+Test Number 42 Begin
+Hand Cnt: original = 461, current = 464
+Deck Cnt: original = 2, current = 3
+Discard Cnt: original = 5, current = 0
+Played Card Cnt: original = 107, current = 108
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 42 End
+
+Test Number 43 Begin
+Hand Cnt: original = 52, current = 52
+Deck Cnt: original = 0, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 418, current = 419
+All Tests Passed!
+Test Number 43 End
+
+Test Number 44 Begin
+Hand Cnt: original = 275, current = 278
+Deck Cnt: original = 5, current = 1
+Discard Cnt: original = 0, current = 0
+Played Card Cnt: original = 174, current = 175
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 44 End
+
+Test Number 45 Begin
+Hand Cnt: original = 376, current = 378
+Deck Cnt: original = 1, current = 0
+Discard Cnt: original = 2, current = 0
+Played Card Cnt: original = 103, current = 104
+All Tests Passed!
+Test Number 45 End
+
+Test Number 46 Begin
+Hand Cnt: original = 441, current = 443
+Deck Cnt: original = 2, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 420, current = 421
+All Tests Passed!
+Test Number 46 End
+
+Test Number 47 Begin
+Hand Cnt: original = 440, current = 443
+Deck Cnt: original = 2, current = 3
+Discard Cnt: original = 5, current = 0
+Played Card Cnt: original = 97, current = 98
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.2) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 47 End
+
+Test Number 48 Begin
+Hand Cnt: original = 298, current = 299
+Deck Cnt: original = 1, current = 0
+Discard Cnt: original = 1, current = 0
+Played Card Cnt: original = 332, current = 333
+All Tests Passed!
+Test Number 48 End
+
+Test Number 49 Begin
+Hand Cnt: original = 129, current = 132
+Deck Cnt: original = 4, current = 0
+Discard Cnt: original = 1, current = 1
+Played Card Cnt: original = 19, current = 20
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+Test Run Fail Count : 2
+Test Number 49 End
+
+Test Number 50 Begin
+Hand Cnt: original = 426, current = 429
+Deck Cnt: original = 3, current = 1
+Discard Cnt: original = 2, current = 0
+Played Card Cnt: original = 414, current = 415
+FAIL(1.4) : Resulting Hand Count Incorrect
+FAIL(2.3) : Resulting Deck Count Incorrect
+FAIL(3.1) : Resulting Discard Count Incorrect
+Test Run Fail Count : 3
+Test Number 50 End
+
+Total Runs PASSED : 18
+Total Runs FAILED : 32
+
+File 'dominion.c'
+Lines executed:12.76% of 572
+Branches executed:7.58% of 422
+Taken at least once:6.40% of 422
+Calls executed:8.00% of 100
+Creating 'dominion.c.gcov'
+

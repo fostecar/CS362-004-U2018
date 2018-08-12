@@ -22,7 +22,7 @@ int main() {
 	srand(time(NULL));
 
 	int i = -5;
-	int numTestRuns = 50;
+	int numTestRuns = 15;
 	int result = 0;
 	int numTestRunsFailed = 0;
 
